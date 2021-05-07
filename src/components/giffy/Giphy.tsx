@@ -3,10 +3,14 @@ import axios from 'axios'
 import {
   Alert,
   Button,
+  Card,
+  CardColumns,
+  Col,
   Container,
   Form,
   FormControl,
   InputGroup,
+  Row,
 } from 'react-bootstrap'
 
 import { Loader } from 'components/common/loader/Loader'
@@ -60,9 +64,11 @@ export const Giphy: FC<{}> = ({}) => {
     ) : (
       currentItems.map((giffy) => {
         return (
-          <div className='gif' key={giffy.id}>
-            <img src={giffy.images.fixed_height.url} alt='gifImages' />
-          </div>
+          <img
+            key={giffy.id}
+            src={giffy.images.fixed_height.url}
+            alt='gifImages'
+          />
         )
       })
     )
