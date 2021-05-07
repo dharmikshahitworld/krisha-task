@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Giphy } from './components/giffy/Giphy'
+import './App.scss'
 
 function App() {
+  // async function getGiphyImages() {
+  //   return await axios
+  //     .get(
+  //       `https://api.giphy.com/v1/gifs/search?api_key=Lw2BlSOVmFK779wjpyJn03gciTLQ2E4g&q=cheeseburgers`
+  //     )
+  //     .then((response) => console.log(response.data.data[0]))
+  //     .catch((error) => {
+  //       throw error
+  //     })
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Giphy />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
